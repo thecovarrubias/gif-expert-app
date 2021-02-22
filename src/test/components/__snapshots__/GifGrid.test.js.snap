@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifGrid /> Debe de mostrar el componente correctamente 1`] = `
+<Fragment>
+  <h2
+    className="animate__animated animate__fadeIn"
+  >
+    One Punch Man
+  </h2>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Cargando...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
+
+exports[`Pruebas en <GifGrid /> Debe de mostrar items cuando se cargan imágenes useFetchGifs 1`] = `
+<Fragment>
+  <h2
+    className="animate__animated animate__fadeIn"
+  >
+    One Punch Man
+  </h2>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ABC"
+      key="ABC"
+      title="Cualquier cosa 1"
+      url="https://localhost/cualquier/cosa_1.jpg"
+    />
+    <GifGridItem
+      id="DEF"
+      key="DEF"
+      title="Cualquier cosa 2"
+      url="https://localhost/cualquier/cosa_2.jpg"
+    />
+  </div>
+</Fragment>
+`;
