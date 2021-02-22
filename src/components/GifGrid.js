@@ -8,11 +8,15 @@ const GifGrid = ({ category }) => {
     const { data: images, loading } = useFetchGifs( category );
 
     return (
-        <>
-            <h2 className="animate__animated animate__fadeIn">{ category }</h2>
-            { loading && <p className="animate__animated animate__flash">Cargando...</p> }
+        <section className="container">
+            <h2 className="animate__animated animate__fadeIn lead mb-4">{ category.toUpperCase() }</h2>
+            { loading && (
+                <div className="spinner-grow text-secondary animate__animated animate__flash" role="status">
+                    <span className="sr-only">Cargando...</span>
+                </div>)
+            }
 
-            <div className="card-grid">
+            <div className="card-columns mb-5">
                 {
                     images.map((img) => (
                         <GifGridItem 
@@ -22,7 +26,7 @@ const GifGrid = ({ category }) => {
                     ))
                 }
             </div>
-        </>
+        </section>
     )
 }
 

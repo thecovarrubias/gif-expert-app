@@ -20,10 +20,14 @@ const AddCategory = ({ setCategories }) => {
     return (
         <form onSubmit={ handleSubmit }>
 
-            <p> { inputValue } </p>
+            {/* <p> { inputValue } </p> */}
 
-            <input 
+            <label htmlFor="GIF" className="form-label">¡Empieza aquí!</label>
+            <input
+                id="GIF"
+                className="form-control"
                 type="text"
+                placeholder="Búsqueda de GIFs"
                 value={ inputValue }
                 onChange={ handleInputChange }
             />
